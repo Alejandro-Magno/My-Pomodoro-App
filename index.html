@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    
+    <nav class=" navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <a class="navbar-brand" href="#">My pomodoro App</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class=" padre collapse navbar-collapse" id="navbarText">
+          <ul class="menu navbar-nav mr-auto aling">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Herramientas</a>
+            </li>
+           
+          </ul>
+         
+        </div>
+
+    </nav>
+
+
+
+    <div class="flex col-md-12">
+   
+        <section class="col-md-6">
+            
+            <form>
+                <div class="form-group">
+                  <label for="formGroupExampleInput">Minutos por pomodoro</label>
+                  <input type="number" class="form-control" id="pomodoro" placeholder="Minutos">
+                </div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput2">Minutos por descanzo corto</label>
+                  <input required type="number" class="form-control" id="res-short" placeholder="Minutos">
+                </div>
+
+                <div class="form-group">
+                        <label for="formGroupExampleInput2">Minutos por descanzo largo</label>
+                        <input type="number" class="form-control" id="res-long" placeholder="Minutos">
+                      </div>
+
+                      
+              </form> 
+              <button onclick="config()" class=" btn btn-primary">Configurar</button>
+              
+            
+            </section>
+              <hr>
+
+        <section class="col-md-6">
+
+        
+                <div class="card">
+                       
+                        <div class="estadisticas body-card card-body">
+                            
+                           
+                              
+                                  <h4 id="dates">Rellena los datos por favor</h4>
+                                  <div id="fill" style="display:none;" >
+                              <h4 id="contador1">Han transcurrido <span id="minutos">0</span>:<span id="segundos">0</span> minutos</h4>
+                               <div id="contando">
+                              <h4>Tienes <span id="pomodoros">0</span> pomodoros</h4>
+                               <button onclick="start()" class="btn btn-primary">comenzar</button>
+                               <button onclick="stop()" class="btn btn-primary">detener</button>
+                            </div>
+                               
+                               <h4 style="display:none;" id="descanzo">El descanzo <span id="agregado"></span> termina en <span id="minutos2">0</span>:<span id="segundos2">0</span> minutos </h4>
+                               <h4 id="descanzo2" style="display: none;">El descanzo ha terminado</h4>
+                               <button style="display: none;" id="continuar" onclick="start()" class="btn btn-primary">comenzar</button>
+                            </div>
+                        </div>
+                        
+                      </div>
+
+        </section>
+
+    </div>
+
+   
+
+
+    <footer class="footer"><nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">Recargar</a>
+          </nav>
+          
+          </footer>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="/scripts/index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+.body {
+
+    display: flex;
+}
+
+.menu {
+
+    margin-left: 80%;
+}
+
+
+
+footer {
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+
+}
+
+.inicio {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+
+}
+
+form {
+
+    margin-top: 150px;
+}
+
+.card {
+    display: flex;
+    flex-flow: wrap row ;
+    height: 500px;
+    margin-top: 75px;
+    align-content: center;
+   
+    
+}
+
+.estadisticas {
+    margin-left: 40px;
+}
+
+button{
+    margin-top: 50px;
+    margin-left: 10px;
+}
+

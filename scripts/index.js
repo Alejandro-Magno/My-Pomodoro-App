@@ -6,6 +6,9 @@ let segundos = 0
 let minutos = pomodoroTiempo
 let pomodoros = 0
 let cronometro2 = 0
+var audio1 = document.getElementById("audio1");
+var audio2 = document.getElementById("audio2");
+var audio3 = document.getElementById("audio3");
 
 
 
@@ -53,6 +56,7 @@ function crono1() {
     if (pomodoros != 4 && pomodoros != 8 && pomodoros != 12) {
 
         console.log('Entraste en el descanzo corto')
+        audio1.play();
         document.getElementById('agregado').innerHTML = 'corto'
         minutos = min_short -1
         segundos = 60
@@ -98,6 +102,7 @@ function crono1() {
        
     } else {
         console.log('Entraste en el descanzo largo')
+        audio2.play();
         document.getElementById('agregado').innerHTML = 'largo'
         minutos = min_log -1
         segundos = 60
@@ -170,6 +175,10 @@ function start() {
     document.getElementById('contador1').style.display = "block";
     document.getElementById('continuar').style.display = "none";
     document.getElementById('descanzo2').style.display = "none";
+    document.getElementById('comienzo').style.display = "none";
+    document.getElementById('continue').style.display = "inline-block";
+   
+    document.getElementById(`configurarBtn`).setAttribute('disabled', '')
 
     minutos = pomodoroTiempo - 1
     segundos = 60
@@ -218,8 +227,49 @@ function start() {
 
 }
 
-function stop() {
+function continuar(){
+    document.getElementById(`continue`).disabled = true
+    
+    
+    cronometro = setInterval(() => {
+     
 
+        segundos -= 10
+         
+        if (minutos <= 0 && segundos <= 0) {
+            
+            clearInterval(cronometro)
+            pomodoros++
+            document.getElementById('pomodoros').innerHTML = pomodoros
+            descanzo()
+        }
+       
+
+    
+        document.getElementById('minutos').innerHTML = minutos
+        document.getElementById('segundos').innerHTML = segundos
+
+        if (segundos <= 0) {
+            segundos = 59
+           
+            if(minutos >0){
+                minutos--
+            }
+            
+
+
+
+
+        }
+
+
+
+    }, 1000);
+
+}
+
+function stop() {
+    document.getElementById(`continue`).disabled = false;
     clearInterval(cronometro)
 
 }

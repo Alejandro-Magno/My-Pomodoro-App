@@ -12,7 +12,7 @@
 
 footer {
 
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
 
@@ -30,6 +30,7 @@ footer {
 .flex {
     display: flex;
     justify-content: center;
+    flex-flow: row wrap;
 
 }
 
@@ -40,20 +41,33 @@ form {
 
 .card {
     display: flex;
-    flex-flow: wrap row ;
+    flex-flow: wrap row;
     height: 500px;
     margin-top: 75px;
     align-content: center;
-   
-    
+
+
 }
 
 .estadisticas {
     margin-left: 40px;
 }
 
-button{
+button {
     margin-top: 50px;
     margin-left: 10px;
 }
+
+#audio3 {
+    display: none
+}
+
+#audio2 {
+    display: none
+}
+
+#audio1 {
+    display: none
+}
+
 

@@ -5,14 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>My Pomodoro App</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
-    <source id="audio1" type="audio/mp3" src="/sonidos/gato-cachorro-gatito-miau-.mp3">
-    <source id="audio2" type="audio/mp3" src="/sonidos/game-thrones-violin.mp3">
-    <source id="audio3" type="audio/mp3" src="/sonidos/ringtones-kill-bill-whistle.mp3">
+
+    <audio id="audio1" controls>
+        <source type="audio/mp3" src="./sonidos/gato-cachorro-gatito-miau-.mp3">
+    </audio>
+
+    <audio id="audio2" controls>
+        <source type="audio/mp3" src="./sonidos/game-thrones-violin.mp3">
+    </audio>
+
+    <audio id="audio3" controls>
+        <source type="audio/mp3" src="./sonidos/ringtones-kill-bill-whistle.mp3">
+    </audio>
+
+
 
 
 
@@ -104,7 +115,7 @@
         <nav class="navbar navbar-light bg-light">
             <a onclick="reload()" class="navbar-brand" href="#">Recargar</a>
         </nav>
-        
+
 
     </footer>
 

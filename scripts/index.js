@@ -54,12 +54,12 @@ function config() {
 
 function crono1() {
 
-    document.getElementById('descanzo').style.display = "block";
+    document.getElementById('descanso').style.display = "block";
 
 
     if (pomodoros != 4 && pomodoros != 8 && pomodoros != 12) {
 
-        console.log('Entraste en el descanzo corto')
+        console.log('Entraste en el descanso corto')
         
         document.getElementById('agregado').innerHTML = 'corto'
         minutos = min_short - 1
@@ -68,7 +68,7 @@ function crono1() {
         cronometro2 = setInterval(() => {
 
 
-            segundos--
+            segundos-=10
 
             if (minutos <= 0 && segundos <= 0) {
 
@@ -80,7 +80,7 @@ function crono1() {
 
                 document.getElementById('continuar').style.display = "block";
                 document.getElementById('descanzo2').style.display = "block";
-                document.getElementById('descanzo').style.display = "none";
+                document.getElementById('descanso').style.display = "none";
             }
 
 
@@ -106,7 +106,7 @@ function crono1() {
         }, 1000);
 
     } else {
-        console.log('Entraste en el descanzo largo')
+        console.log('Entraste en el descanso largo')
         
         document.getElementById('agregado').innerHTML = 'largo'
         minutos = min_log - 1
@@ -115,7 +115,7 @@ function crono1() {
         cronometro2 = setInterval(() => {
 
 
-            segundos--
+            segundos-=10
 
             if (minutos <= 0 && segundos <= 0) {
 
@@ -126,7 +126,7 @@ function crono1() {
 
                 document.getElementById('continuar').style.display = "block";
                 document.getElementById('descanzo2').style.display = "block";
-                document.getElementById('descanzo').style.display = "none";
+                document.getElementById('descanso').style.display = "none";
             }
 
 
@@ -163,11 +163,11 @@ reload = () => {
     location.reload()
 }
 
-function descanzo() {
+function descanso() {
     document.getElementById('iniciarDescanzo').style.display = "none";
             document.getElementById('descanzo_btn').style.display = "none";
    
-    document.getElementById('descanzo').style.display = "block";
+    document.getElementById('descanso').style.display = "block";
    
     
 
@@ -181,7 +181,7 @@ function descanzo() {
 function start() {
 
     document.getElementById('contando').style.display = "block";
-    document.getElementById('descanzo').style.display = "none";
+    document.getElementById('descanso').style.display = "none";
     document.getElementById('contador1').style.display = "block";
     document.getElementById('continuar').style.display = "none";
     document.getElementById('descanzo2').style.display = "none";
@@ -198,7 +198,7 @@ function start() {
     cronometro = setInterval(() => {
 
 
-        segundos--
+        segundos-=10
 
         if (minutos <= 0 && segundos <= 0) {
 
@@ -249,14 +249,14 @@ function continuar() {
     cronometro = setInterval(() => {
 
 
-        segundos--
+        segundos-=10
 
         if (minutos <= 0 && segundos <= 0) {
 
             clearInterval(cronometro)
             pomodoros++
             document.getElementById('pomodoros').innerHTML = pomodoros
-            descanzo()
+            descanso()
         }
 
 

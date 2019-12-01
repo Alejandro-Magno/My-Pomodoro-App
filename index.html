@@ -54,12 +54,12 @@
                     <input type="number" class="form-control" id="pomodoro" placeholder="Minutos">
                 </div>
                 <div class="form-group">
-                    <label for="formGroupExampleInput2">Minutos por descanzo corto</label>
+                    <label for="formGroupExampleInput2">Minutos por descanso corto</label>
                     <input required type="number" class="form-control" id="res-short" placeholder="Minutos">
                 </div>
 
                 <div class="form-group">
-                    <label for="formGroupExampleInput2">Minutos por descanzo largo</label>
+                    <label for="formGroupExampleInput2">Minutos por descanso largo</label>
                     <input type="number" class="form-control" id="res-long" placeholder="Minutos">
                 </div>
 
@@ -78,8 +78,8 @@
 
                 <div class="estadisticas body-card card-body">
                     <h4 id="dates">Rellena los datos por favor</h4>
-                    <h4 style="display: none;" id="iniciarDescanzo">Es momento de tomar un descanzo</h4>
-                    <button style="display: none;" id="descanzo_btn" onclick="descanzo()" class="btn btn-primary">Iniciar descanzo</button>
+                    <h4 style="display: none;" id="iniciarDescanzo">Es momento de tomar un descanso</h4>
+                    <button style="display: none;" id="descanzo_btn" onclick="descanso()" class="btn btn-primary">Iniciar descanso</button>
 
                     <div id="fill" style="display:none;">
                         <h4 id="contador1">Quedan <span id="minutos">0</span> minutos y <span id="segundos">0</span>
@@ -94,9 +94,9 @@
                             </div>
                         </div>
 
-                        <h4 style="display:none;" id="descanzo">El descanzo <span id="agregado"></span> termina en: <br>
+                        <h4 style="display:none;" id="descanso">El descanso <span id="agregado"></span> termina en: <br>
                             <span id="minutos2">0</span> minutos y <span id="segundos2">0</span> segundos </h4>
-                        <h4 id="descanzo2" style="display: none;">El descanzo ha terminado</h4>
+                        <h4 id="descanzo2" style="display: none;">El descanso ha terminado</h4>
                         <button style="display: none;" id="continuar" onclick="start()"
                             class="btn btn-primary">comenzar</button>
                     </div>

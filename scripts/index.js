@@ -68,7 +68,7 @@ function crono1() {
         cronometro2 = setInterval(() => {
 
 
-            segundos-=10
+            segundos--
 
             if (minutos <= 0 && segundos <= 0) {
 
@@ -115,7 +115,7 @@ function crono1() {
         cronometro2 = setInterval(() => {
 
 
-            segundos-=10
+            segundos--
 
             if (minutos <= 0 && segundos <= 0) {
 
@@ -198,7 +198,7 @@ function start() {
     cronometro = setInterval(() => {
 
 
-        segundos-=10
+        segundos--
 
         if (minutos <= 0 && segundos <= 0) {
 
@@ -249,7 +249,7 @@ function continuar() {
     cronometro = setInterval(() => {
 
 
-        segundos-=10
+        segundos--
 
         if (minutos <= 0 && segundos <= 0) {
 
